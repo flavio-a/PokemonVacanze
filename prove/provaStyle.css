@@ -57,11 +57,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+	background:#097512;
 }
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 45px;
 }
 
 .sidebar-nav li a {
@@ -106,7 +107,8 @@
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 250px;		
+		background:#096712;
     }
 
     #wrapper.toggled #sidebar-wrapper {
