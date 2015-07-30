@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
-	<head>
+<head>
 	    	
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Bootstrap -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
-		<!--style-->
-	    <link href="style/element.css" rel="stylesheet" >
-        <link href="style/sidebar.css" rel="stylesheet" >
+    <!--style-->
+	<link href="style/element.css" rel="stylesheet" >
+    <link href="style/sidebar.css" rel="stylesheet" >
     
-        <!-- Meta -->
-        <title>Compito Vacanze Sito Pokémon</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <meta name="copyright" content="">
-        <meta name ="copyright" content="">
-        <meta name ="DC language" content="ita" scheme="RFC1766">
-        <meta name ="robots" content="all">
-    </head>
+    <!-- Meta -->
+    <title>Compito Vacanze Sito Pokémon</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <meta name ="copyright" content="">
+    <meta name ="DC language" content="ita" scheme="RFC1766">
+    <meta name ="robots" content="all">
+</head>
  
 <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bootstrap/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-    <script>
-    $(window).scroll(function(){
-        $("#sidebar-wrapper").css("top", Math.max(0, 52 - $(this).scrollTop()));
-        /*var $this = $("#sidebar-wrapper");
-            pos = 52;
-        if ($(window).scrollTop() < pos) {
-            $this.css({
-                position: 'absolute',
-                top: pos
-            });
-        } else {
-            $this.css({
-                position: 'relative',
-                top: 'auto'
-            });
-        }*/
-    });
-    </script>
     
     <!-- Navbar -->
     <nav class="navbar navbar-inverse" style="background-color: #097512;" role="navigation">
@@ -85,18 +66,9 @@
         </div>
     </nav>
     
-    <!-- Hiding and show sidebar -->
-    <script>
-    $("#sidebar-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-    
     <!-- Wrapper for sidebar -->
     <div id="wrapper">
 
-        <div id="sidebar-wrapper-mark"></div>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav pippo">
@@ -163,6 +135,47 @@
         </div>
 
     </div>
-
+    
+    <!--
+    <div style="bottom: 0; background-color: red;">
+        pippo
+    </div>-->
+    
+    <!-- Hiding and show sidebar button -->
+    <script>
+    $("#sidebar-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#page-content-wrapper").css('width', function (idx, oldVal) {
+            oldVal = oldVal.substr(0, oldVal.length-2);
+            var shift = parseInt($("#sidebar-wrapper").css('left'));
+            if ($("#wrapper").hasClass("toggled"))
+                return oldVal - shift;
+            else
+                return oldVal - -shift;
+        });
+    });
+    </script>
+    
+    <!-- Scrolling sidebar -->
+    <script>
+    $(window).scroll(function(){
+        //$("#sidebar-wrapper").css("top", Math.max(0, 52 - $(this).scrollTop()));
+        /*var $this = $("#sidebar-wrapper");
+            pos = 52;
+        if ($(window).scrollTop() < pos) {
+            $this.css({
+                position: 'absolute',
+                top: pos
+            });
+        } else {
+            $this.css({
+                position: 'relative',
+                top: 'auto'
+            });
+        }*/
+    });
+    </script>
+    
     </body>
 </html>
