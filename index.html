@@ -66,12 +66,12 @@
         </div>
     </nav>
     
-    <!-- Wrapper for sidebar -->
+    <!-- Sidebar anche contents -->
     <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav pippo">
+            <ul class="sidebar-nav">
                 <!-- title
                 <li class="sidebar-brand">
                     <a href="#">Start Bootstrap</a>
@@ -136,10 +136,19 @@
 
     </div>
     
-    <!--
-    <div style="bottom: 0; background-color: red;">
-        pippo
-    </div>-->
+    <!-- Footer -->
+    <footer class="hidden-xs" style="background: white;">
+        <!-- Separatore -->
+        <div style="height: 5px;"></div>
+        <!-- Linea verde -->
+        <div class="navbartext" style="bottom: 0; background-color: #097512; height: 2px; width: 90%; margin: auto;">
+            <!-- Contenuti all'interno del verde (eventualmente nessuno, ci sta anche solo una riga di separazione) -->
+        </div>
+        <div style="text-align: center;">
+            per il footer pensavo a qualcosa del genere. Solo non mi convince la fine della sidebar<br>
+            contenuti del footer (eg: copyright)
+        </div>
+    </footer>
     
     <!-- Hiding and show sidebar button -->
     <script>
@@ -147,12 +156,12 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
         $("#page-content-wrapper").css('width', function (idx, oldVal) {
-            oldVal = oldVal.substr(0, oldVal.length-2);
+            oldVal = parseInt(oldVal.substr(0, oldVal.length-2));
             var shift = parseInt($("#sidebar-wrapper").css('left'));
             if ($("#wrapper").hasClass("toggled"))
                 return oldVal - shift;
             else
-                return oldVal - -shift;
+                return oldVal + shift;
         });
     });
     </script>
