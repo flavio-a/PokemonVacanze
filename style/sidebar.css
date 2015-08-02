@@ -28,7 +28,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: gray;
+    background: #FFFF66;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -55,6 +55,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
+	color:black;
+	font-weight:700;
+	
 }
 
 .sidebar-nav li {
@@ -65,12 +68,12 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #ccc;
+    color: black;
 }
 
 .sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
+    
+    color: gray;
     background: rgba(255,255,255,0.2);
 }
 
