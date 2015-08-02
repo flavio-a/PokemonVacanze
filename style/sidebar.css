@@ -30,7 +30,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: #F0F93D;
+    background: yellow;
 }
 
 #wrapper.toggled #sidebar-wrapper {
