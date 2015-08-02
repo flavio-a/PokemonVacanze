@@ -137,7 +137,7 @@
     </div>
     
     <!-- Footer -->
-    <footer class="hidden-xs" style="background: white;">
+    <footer id="footer" class="hidden-xs" style="background: white;">
         <!-- Separatore -->
         <div style="height: 5px;"></div>
         <!-- Linea verde -->
@@ -163,27 +163,32 @@
             else
                 return oldVal + shift;
         });
+        $("#sidebar-wrapper").css("height", function () {
+            if ($("#wrapper").hasClass("toggled"))
+                return $("#wrapper").height()
+            else
+                return '100%';
+        });
+    });
+    $(window).resize( function(){
+        if ($(window).width() >= 768){
+            $("#wrapper").removeClass("toggled");
+            $("#sidebar-wrapper").css("height", '100%');
+       }
     });
     </script>
+
     
-    <!-- Scrolling sidebar -->
+    <!-- Stretching sidebar mobile -->
     <script>
-    $(window).scroll(function(){
-        //$("#sidebar-wrapper").css("top", Math.max(0, 52 - $(this).scrollTop()));
-        /*var $this = $("#sidebar-wrapper");
-            pos = 52;
-        if ($(window).scrollTop() < pos) {
-            $this.css({
-                position: 'absolute',
-                top: pos
-            });
-        } else {
-            $this.css({
-                position: 'relative',
-                top: 'auto'
-            });
-        }*/
-    });
+    function setWrapperHeight() {
+        if ($(window).width() < 768)
+            $("#wrapper").css("height", $("#page-content-wrapper").height());
+        else 
+            $("#wrapper").css("height", '100%');
+    }
+    $(window).load( setWrapperHeight );
+    $(window).resize( setWrapperHeight );
     </script>
     
     </body>

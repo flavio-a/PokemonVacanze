@@ -9,6 +9,7 @@
     margin-top: -20px;
     position: auto;
     height: 100%;
+    min-height: 100%;
 }
 
 
@@ -19,9 +20,10 @@
 #sidebar-wrapper {
     z-index: 1000;
     position: absolute;
+    height: 100%;
+    min-height: 100%;
     left: 140px;
     width: 0;
-    height: 100%;
     margin-left: -140px;
     overflow-y: auto;
     -webkit-transition: all 0.5s ease;
@@ -106,6 +108,7 @@
     }
 
     #sidebar-wrapper {
+        height: 100%;
         width: 140px;
     }
 
