@@ -3,16 +3,14 @@ $("#sidebar-toggle").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
     $("#page-content-wrapper").css('width', function (idx, oldVal) {
-        oldVal = parseInt(oldVal.substr(0, oldVal.length-2));
-        var shift = parseInt($("#sidebar-wrapper").css('left'));
         if ($("#wrapper").hasClass("toggled"))
-            return oldVal - shift;
+            return parseInt(oldVal.substr(0, oldVal.length-2)) - parseInt($("#sidebar-wrapper").css('left'));
         else
-            return oldVal + shift;
+            return '100%';
     });
     $("#sidebar-wrapper").css("height", function () {
         if ($("#wrapper").hasClass("toggled"))
-            return $("#wrapper").height()
+            return $("#page-content-wrapper").height() + 2*$("#page-content-wrapper").css("padding-top").replace("px", "");
         else
             return '100%';
     });
@@ -25,13 +23,3 @@ $(window).resize( function(){
         $("#sidebar-wrapper").css("height", '100%');
    }
 });
-
-//Stretching sidebar mobile
-function setWrapperHeight() {
-    if ($(window).width() < 768)
-        $("#wrapper").css("height", $("#page-content-wrapper").height() + 2*$("#page-content-wrapper").css("padding-top").replace("px", ""));
-    else 
-        $("#wrapper").css("height", '100%');
-}
-$(window).load( setWrapperHeight );
-$(window).resize( setWrapperHeight );
