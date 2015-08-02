@@ -25,12 +25,7 @@
     <meta name ="robots" content="all">
 </head>
  
-<body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    
+<body>    
     <!-- Navbar -->
     <nav class="navbar navbar-inverse" style="background-color: #097512;" role="navigation">
         <div class="container-fluid">
@@ -150,46 +145,12 @@
         </div>
     </footer>
     
-    <!-- Hiding and show sidebar button -->
-    <script>
-    $("#sidebar-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $("#page-content-wrapper").css('width', function (idx, oldVal) {
-            oldVal = parseInt(oldVal.substr(0, oldVal.length-2));
-            var shift = parseInt($("#sidebar-wrapper").css('left'));
-            if ($("#wrapper").hasClass("toggled"))
-                return oldVal - shift;
-            else
-                return oldVal + shift;
-        });
-        $("#sidebar-wrapper").css("height", function () {
-            if ($("#wrapper").hasClass("toggled"))
-                return $("#wrapper").height()
-            else
-                return '100%';
-        });
-    });
-    $(window).resize( function(){
-        if ($(window).width() >= 768){
-            $("#wrapper").removeClass("toggled");
-            $("#sidebar-wrapper").css("height", '100%');
-       }
-    });
-    </script>
-
-    
-    <!-- Stretching sidebar mobile -->
-    <script>
-    function setWrapperHeight() {
-        if ($(window).width() < 768)
-            $("#wrapper").css("height", $("#page-content-wrapper").height());
-        else 
-            $("#wrapper").css("height", '100%');
-    }
-    $(window).load( setWrapperHeight );
-    $(window).resize( setWrapperHeight );
-    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Scripts for sidebar -->
+    <script src="script/sidebar.js"></script>
     
     </body>
 </html>
