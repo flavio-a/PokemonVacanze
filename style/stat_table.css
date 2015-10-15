@@ -1,5 +1,116 @@
+.PS_tr{
+    background: #FF5959;
+}
 .PS_row{
     background: #FF0000;
     border: 1px solid #A60000;
     margin: 1px;
+}
+.PS_text{
+    background: #FF5959;
+    width: 60px;
+}
+.PS_stat{
+    background: #FF5959;
+    width: 30px;
+}
+
+
+
+
+.Att_tr{
+    background: #F5AC78;
+}
+.Att_row{
+    background: #F08030;
+    border: 1px solid #9C531F;
+    margin: 1px;
+}
+.Att_text{
+    background: #F5AC78;
+    width: 60px;
+}
+.Att_stat{
+    background: #F5AC78;
+    width: 30px;
+}
+
+
+
+
+.Def_tr{
+    background: #FAE078;
+}
+.Def_row{
+    background: #F8D030;
+    border: 1px solid #A1871F;
+    margin: 1px;
+}
+.Def_text{
+    background: #FAE078;
+    width: 60px;
+}
+.Def_stat{
+    background: #FAE078;
+    width: 30px;
+}
+
+
+
+
+.AttSp_tr{
+    background: #9DB7F5;
+}
+.AttSp_row{
+    background: #6890F0;
+    border: 1px solid #445E9C;
+    margin: 1px;
+}
+.AttSp_text{
+    background: #9DB7F5;
+    width: 60px;
+}
+.AttSp_stat{
+    background: #9DB7F5;
+    width: 30px;
+}
+
+
+
+
+.DefSp_tr{
+    background: #A7DB8D;
+}
+.DefSp_row{
+    background: #78C850;
+    border: 1px solid #4E8234;
+    margin: 1px;
+}
+.DefSp_text{
+    background: #A7DB8D;
+    width: 60px;
+}
+.DefSp_stat{
+    background: #A7DB8D;
+    width: 30px;
+}
+
+
+
+
+.Vel_tr{
+    background: #FA92B2;
+}
+.Vel_row{
+    background: #F85888;
+    border: 1px solid #A13959;
+    margin: 1px;
+}
+.Vel_text{
+    background: #FA92B2;
+    width: 60px;
+}
+.Vel_stat{
+    background: #FA92B2;
+    width: 30px;
 }

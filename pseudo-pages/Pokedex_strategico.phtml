@@ -1,0 +1,23 @@
+{{initialize}}
+ 
+<body>    
+    {{navbar}}
+    
+    {{sidebarOpen}}
+                        <h2 align="left">Elenco dei Pokémon</h2>
+						<div class="form-group">
+							<input type="text" class="form-control" id="dex_search" placeholder="Search">
+						</div>
+						<div id="pokemon-list">
+							<ul class="list">
+							</ul>
+	{{sidebarClose}}
+    
+    {{footer}}
+	<!-- Include listjs -->
+	<script src="../script/listjs.js"></script>
+	<!-- Scripts for search pokédex -->
+	<script src="../script/search_dex.js"></script>
+    
+    </body>
+</html>
