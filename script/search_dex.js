@@ -1,20 +1,21 @@
-console.log('search_dex.js');
+//console.log('search_dex.js');
+
+var pokemonList
+
+//read the list from a file
+$.getJSON("../resources/dexList.json", function(json) {
+    pokemonList = new List('pokemon-list', options, json);
+});
 
 var options = {
-    item: '<li><h4 class="name"><a href=link>Vino</a></h4></li>'
+    item: '<li><span class="element"></a></li>'
 };
-
-var values = [
-    { name: 'Dragonite', link: 'pages/Dragonite.html' }
-];
-
-var pokemonList = new List('pokemon-list', options, values);
 
 //functions for filtering
 $('#dex_search').change(function () {
-	var filterStr = $('#dex_search').val();
+	var filterStr = $('#dex_search').val().toLowerCase();
 	pokemonList.filter(function(item) {
-	if (item.values().name.indexOf(filterStr) > -1) {
+	if (item.values().name.toLowerCase().indexOf(filterStr) > -1) {
 		return true;
 	} else {
 		return false;
