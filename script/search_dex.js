@@ -12,7 +12,7 @@ var options = {
 };
 
 //functions for filtering
-$('#dex_search').change(function () {
+$('#dex_search').keyup(function () {
 	var filterStr = $('#dex_search').val().toLowerCase();
 	pokemonList.filter(function(item) {
 	if (item.values().name.toLowerCase().indexOf(filterStr) > -1) {
