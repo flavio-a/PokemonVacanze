@@ -10,7 +10,7 @@
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
     <!--style-->
-	<link href="../../style/element.css" rel="stylesheet" >
+	<link href="../../style/navbar.css" rel="stylesheet" >
     <link href="../../style/sidebar.css" rel="stylesheet" >
     <link href="../../style/stat_table.css" rel="stylesheet" >
     <link href="../../style/roundy.css" rel="stylesheet" >
@@ -28,8 +28,8 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse" style="background-color: #097512;" role="navigation">
-        <div class="container-fluid">
+    <nav class="navbar navbar-inverse" role="navigation" style="background-color:#fff; border: 0px">
+        <div class="container-fluid" style="background-color: #097512;">
             <!-- Part kept in mobile version -->
             <div class="navbar-header">
                 <!--<button type="button" class="collapsed visible-xs-block pull-right" id="sidebar-toggle">-->
@@ -60,6 +60,13 @@
                 </form>
             </div>
         </div>
+		
+		<!-- Bottoni per la versione mobile -->
+		<div>
+			<a href="../../pages/Pokedex_strategico.html" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Pokédex Strategico</a>
+			<a href="../../#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Guide</a>
+			<a href="../../#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Team</a>
+		</div>
     </nav>
     
     <!-- Sidebar anche contents -->
@@ -93,7 +100,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 align="center"><big>Alakazam</big></h1>
-                        <img style="width:50%; margin:5px; float:right;" align="top" src="../../images/Alakazam.png">
+                        <img class="hidden-xs" style="width:50%; margin:5px; float:right;" align="top" src="../../images/Alakazam.png">
                         <h2>Info sul Pokémon:</h2>
 
 <!-- Tabella statistiche -->
@@ -216,9 +223,10 @@ Le statistiche minime sono calcolate con 0 PA, VI pari a 0 e una natura sfavorev
             <!-- Contenuti all'interno del verde (eventualmente nessuno, ci sta anche solo una riga di separazione) -->
         </div>
         <div style="text-align: center;">
-            prima riga del footer<br>
-            contenuti del footer (eg: copyright)
+			<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.it">copyright</a>
         </div>
+		<!-- Linea invisibile -->
+        <div class="navbartext" style="bottom: 0; height: 10px; width: 90%; margin: auto;"></div>
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
