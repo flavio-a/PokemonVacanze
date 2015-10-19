@@ -7,11 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
     <!--style-->
-	<link href="style/navbar.css" rel="stylesheet" >
-    <link href="style/sidebar.css" rel="stylesheet" >
+	<link href="../style/navbar.css" rel="stylesheet" >
+    <link href="../style/sidebar.css" rel="stylesheet" >
+    <link href="../style/dexList.css" rel="stylesheet" >
     
     <!-- Meta -->
     <title>Compito Vacanze Sito Pokémon</title>
@@ -23,7 +24,7 @@
     <meta name ="DC language" content="ita" scheme="RFC1766">
     <meta name ="robots" content="all">
 </head>
-
+ 
 <body>    
     <!-- Navbar -->
     <nav class="navbar navbar-inverse" role="navigation" style="background-color:#fff; border: 0px">
@@ -31,8 +32,8 @@
             <!-- Part kept in mobile version -->
             <div class="navbar-header">
                 <!--<button type="button" class="collapsed visible-xs-block pull-right" id="sidebar-toggle">-->
-                <a class="navbar-brand"  rel="home" href="index.html" title="Home">
-                     <img style="max-width:60px; margin-top: -10px; margin-left: -10px; align: center;" src="images/logo.png" >
+                <a class="navbar-brand"  rel="home" href="../index.html" title="Home">
+                     <img style="max-width:60px; margin-top: -10px; margin-left: -10px; align: center;" src="../images/logo.png" >
                 </a>
                 <button type="button" class="navbar-toggle pull-left" id="sidebar-toggle">
                     <span class="sr-only">Toggle sidebar</span>
@@ -46,7 +47,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <!-- Class active example <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-                    <li><a href="pages/Pokedex_strategico.html" class="navbartext">Pokédex Strategico</a></li>
+                    <li><a href="../pages/Pokedex_strategico.html" class="navbartext">Pokédex Strategico</a></li>
                     <li><a href="#" class="navbartext">Guide</a></li>
                     <li><a href="#" class="navbartext">Team</a></li>
                 </ul>
@@ -61,7 +62,7 @@
 		
 		<!-- Bottoni per la versione mobile -->
 		<div>
-			<a href="pages/Pokedex_strategico.html" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Pokédex Strategico</a>
+			<a href="../pages/Pokedex_strategico.html" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Pokédex Strategico</a>
 			<a href="#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Guide</a>
 			<a href="#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button">Team</a>
 		</div>
@@ -78,7 +79,7 @@
                     <a href="#">Start Bootstrap</a>
                 </li>-->
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
                 <li>
                     <a href="#">Pagina a caso</a>
@@ -97,15 +98,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <!--<a href="pages/editor.html">EDITOR</a>-->
-                        <img class="hidden-xs" style="width:60%; margin:5px; float:right;" align="top" src="images/home_charizard.jpg">
-                        <h1>Benvenuti nella wiki italiana per il battling competitivo</h1>
-                        <p><big>Pagina in evidenza:<big><a href="pages/Pokemon/Dragonite.html">Dragonite</a></big></big></p>
-                        <p> Questa wiki nasce per tradurre in italiano le nozioni relative al battling competitivo.
-						Spesso le informazioni sono accessibili solo in inglese su alcuni siti famosi (<a href="http://www.smogon.com/" target=”_blank” >smogon</a>) e non sono sempre facilmente comprensibili ad un nuovo utente. </p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-                    </div>
+                        <h2 align="left">Editor:</h2>
+                        <textarea name="pageCode" cols="40" rows="5" id="pageCode" style="width:95%; height:100%;"></textarea>
+                        <button type="submit" class="btn btn-default" id="save" value="Save">Save</button>
+	                </div>
                 </div>
             </div>
         </div>
@@ -128,11 +124,15 @@
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <!-- Scripts for sidebar -->
-    <script src="script/sidebar.js"></script>
+    <script src="../script/sidebar.js"></script>
+	<!-- FileSaver.js -->
+	<script src="../script/FileSaver.js"></script>
+	<!-- Scripts for editing -->
+	<script src="../script/editor.js"></script>
     
     </body>
 </html>

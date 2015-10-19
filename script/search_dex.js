@@ -1,6 +1,6 @@
 //console.log('search_dex.js');
 
-var pokemonList
+var pokemonList;
 
 //read the list from a file
 $.getJSON("../resources/dexList.json", function(json) {
