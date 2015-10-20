@@ -13,6 +13,7 @@
 .PS_stat{
     background: #FF5959;
     width: 30px;
+    text-align: center;
 }
 
 
@@ -33,6 +34,7 @@
 .Att_stat{
     background: #F5AC78;
     width: 30px;
+    text-align: center;
 }
 
 
@@ -53,46 +55,49 @@
 .Def_stat{
     background: #FAE078;
     width: 30px;
+    text-align: center;
 }
 
 
 
 
-.AttSp_tr{
+.SpA_tr{
     background: #9DB7F5;
 }
-.AttSp_row{
+.SpA_row{
     background: #6890F0;
     border: 1px solid #445E9C;
     margin: 1px;
 }
-.AttSp_text{
+.SpA_text{
     background: #9DB7F5;
     width: 60px;
 }
-.AttSp_stat{
+.SpA_stat{
     background: #9DB7F5;
     width: 30px;
+    text-align: center;
 }
 
 
 
 
-.DefSp_tr{
+.SpD_tr{
     background: #A7DB8D;
 }
-.DefSp_row{
+.SpD_row{
     background: #78C850;
     border: 1px solid #4E8234;
     margin: 1px;
 }
-.DefSp_text{
+.SpD_text{
     background: #A7DB8D;
     width: 60px;
 }
-.DefSp_stat{
+.SpD_stat{
     background: #A7DB8D;
     width: 30px;
+    text-align: center;
 }
 
 
@@ -113,4 +118,5 @@
 .Vel_stat{
     background: #FA92B2;
     width: 30px;
+    text-align: center;
 }

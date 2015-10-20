@@ -1,4 +1,4 @@
-//console.log('search_dex.js');
+console.log('search_dex.js');
 
 var pokemonList;
 
