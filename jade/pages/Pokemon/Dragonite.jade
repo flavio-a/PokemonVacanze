@@ -1,4 +1,5 @@
 include ../../templates/table_stat.jade
+include ../../templates/pokemon_set.jade
 
 block vars
     - var path = '../../'
@@ -22,42 +23,17 @@ block content
         br
         h3 #[big Proposta principale:]
         br
-        p
-            | Dragonite @ Baccaprugna #[br]
-            | Abilità: Multisquame #[br]
-            | PA: 4 PS / 252 Att / 252 Spe #[br]
-            | Natura Adamantina #[br]
-            | - Dragodanza #[br]
-            | - Oltraggio/Dragartigli #[br]
-            | - Extrarapido/Fuocopugno/Trespolo #[br]
-            | - Terremoto
-        br
+        +pset('Dragonite','Baccaprugna','Multisquame','4 PS','252 Att','252 Spe','Adamantina','Dragodanza','Oltraggio/Dragartigli','Extrarapido/Fuocopugno/Trespolo','Terremoto')
         p La mossa principale di questo set è Dragodanza che consente a Dragonite di superare in velocità quasi tutti gli attaccanti veloci e inoltre  aumenta i suoi danni. Si può sostituire Dragartigli con Oltraggio se si vuole più potenza. Extrarapido con +2 di priorità permette di colpire Pokémon come Talonflame o Weavile. Fuocopugno elimina in un solo colpo Pokémon come Skarmory, Ferrothorn e Magnezone che possono fermare Dragonite. Trespolo è utile per recuperare PS e ripristinare Multisquame. Terremoto è utile per uccidere i Pokémon di tipo Accaio che resistono a Dragartigli. La Baccaprugna toglie tutte le condizioni di stato che possono danneggiare gravemente Dragonite ed entra in combo con Oltraggio per rimuovere la confusione. Con questo set Dragonite si propone come un ripulitore in grado di entrare su molti Pokémon e alzare le proprie statistiche ma estremamente vulnerabile una volta persa Multisquame. Per essere veramente efficacie deve essere giocato dopo l'eliminazione dei suoi counter e poter usare una o due Dragodanze.
         br
         h3 #[big Seconda proposta:]
         br
-        p
-            | Dragonite @ Bendascelta #[br]
-            | Abilità: Multisquame #[br]
-            | PA:  4 PS / 252 Att / 252 Spe #[br]
-            | Natura Adamantina #[br]
-            | - Oltraggio/Dragartigli #[br]
-            | - Extrarapido/Fuocopugno #[br]
-            | - Fuocopugno/Tuonopugno #[br]
-            | - Terremoto
+        +pset('Dragonite','Bendascelta','Multisquame','4 PS','252 Att','252 Spe','Adamantina', 'Oltraggio/Dragartigli','Extrarapido/Fuocopugno','Fuocopugno/Tuonopugno','Terremoto')
         p In questa variante Dragonite si propone come un attaccante fisico lento con danni incredibili fin dal primo turno. Grazie alla bendascelta ottiene un grandissimo potere offensivo, ma deve rinunciare a Dragodanza. Rinuncia al suo ruolo di ripulitore, ma può essere riutilizzato anche senza Multisquame non dovendo spendere il primo turno per aumentare le proprie statistiche. Tuonopugno è ottimo contro Azumarill e Togekiss.
         br
         h3 #[big Terza proposta:]
         br
-        p
-            | Dragonite @ Avanzi #[br]
-            | Abilità: Multisquame #[br]
-            | PA: 216 PS / 64 Att / 228 SpD #[br]
-            | Natura Adamantina #[br]
-            | - Trespolo #[br]
-            | - Dragartigli #[br]
-            | - Extrarapido/Terremoto #[br]
-            | - Fuocopugno/Terremoto #[br]
+        +pset('Dragonite','Avanzi','Multisquame','216 PS','64 Att','228 SpD','Adamantina','Trespolo','Dragartigli','Extrarapido/Terremoto','Fuocopugno/Terremoto')
         p Con questo set Dragonite appare come un attaccante con alto potenziale difensivo. La sua abilità combinata con avanzi e trespolo lo rendono molto difficile da eliminare per altri attaccanti (ma lo lasciano vulnerabile alle condizioni d stato). Le sue alte statistiche offensive gli permettono di infliggere molti danni e sconfiggere la maggior parte degli attaccanti avversari. Dragartigli è preferito a Oltraggio per evitare di rimanere bloccato diversi turni.
         br
         h3 #[big Counter:]

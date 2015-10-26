@@ -1,7 +1,7 @@
 var jade = require('jade');
 var fs   = require('fs');
 
-exploreFolder('./jade', compileJade);
+exploreFolder('./jade', compile);
 
 function exploreFolder(folder, work){
 	fs.readdir(folder, function (err, list){
@@ -9,11 +9,17 @@ function exploreFolder(folder, work){
 			var fullPath = folder + '/' + list[path];
 			if (list[path].indexOf('.') == -1)
 				exploreFolder(fullPath, work);
-			else if (isPage(fullPath)) {
-				work(fullPath, getSavePath(fullPath));
-			}
+			else
+				work(fullPath);
 		}
 	});
+}
+
+//è il compito da eseguire su ogni file: controlla se è una pagina jade da compilare
+//e la compila salvandola nel percorso giusto
+function compile(path){
+	if (isPage(path))
+		compileJade(path, getSavePath(path));
 }
 
 function isPage(path){
