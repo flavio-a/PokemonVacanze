@@ -1,0 +1,8 @@
+.navbartext {
+    color: white !important;
+	font-weight:700;
+}
+.navbartext:hover{
+	color:black !important;
+	background:white;
+}

@@ -1,0 +1,30 @@
+// Navbar 
+nav(class="navbar navbar-inverse" role="navigation" style="background-color:#fff; border: 0px")
+    .container-fluid(style="background-color: #097512;")
+        // Part kept in mobile version 
+        .navbar-header
+            //<button type="button" class="collapsed visible-xs-block pull-right" id="sidebar-toggle">
+            a.navbar-brand(rel="home" href="/Home" title="Home")
+                 img(style="max-width:60px; margin-top: -10px; margin-left: -10px; align: center;" src="/images/logo.png")
+            button(type="button" class="navbar-toggle pull-left" id="sidebar-toggle")
+                span.sr-only Toggle sidebar
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+        // Part collapsed in mobile version 
+        div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+            ul(class="nav navbar-nav")
+                li #[a(href="/Pokedex_strategico" class="navbartext") Pokédex Strategico]
+                li #[a(href="#" class="navbartext") Guide]
+                li #[a(href="#" class="navbartext") Team]
+            form(class="navbar-form navbar-right" role="search")
+                .form-group
+                    input(type="text" class="form-control" placeholder="Search")
+                button(type="submit" class="btn btn-default") Search
+ 
+    // Bottoni per la versione mobile 
+    div
+        a(href="/Pokedex_strategico" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button") Pokédex Strategico
+        a(href="#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button") Guide
+        a(href="#" class="btn btn-info navbar-toggle nav-button nav-button-text" role="button") Team

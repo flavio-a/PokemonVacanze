@@ -1,0 +1,18 @@
+extend ../templates/basePage
+
+block content
+    h2(align="left") Elenco dei Pokémon
+    p Ricerca:
+    .form-group
+        input(type="text" class="form-control" id="dex_search" placeholder="Search")
+    #pokemon-list
+        ul(class="list")
+
+block append scripts
+    // Include listjs 
+    script(src="/script/vendor/listjs.js")
+    // Scripts for search pokédex 
+    script(src="/script/search_dex.js")
+
+block append style
+    link(href="/style/dexList.css" rel="stylesheet")

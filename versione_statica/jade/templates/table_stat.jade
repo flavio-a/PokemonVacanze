@@ -1,0 +1,36 @@
+// Una riga di una statistica
+mixin stat_line(nome_stat, val)
+    tr(class="#{nome_stat}_tr")
+        td
+            table(class="#{nome_stat}_row" cellspacing="0" cellpadding="0")
+                tr
+                    th(class="#{nome_stat}_text") #{nome_stat}
+                    th(class="#{nome_stat}_stat") #{val}
+                    td(style="width: #{val}px;")
+        th(style="text-align: center;")
+            small= nome_stat === 'PS' ? (2 * val + 110) + " - " + (2 * val + 204) : parseInt((2 * val + 5) * 9 / 10) + " - " + parseInt((2 * val + 99) * 11 / 10)
+
+
+// Tabella statistiche 
+mixin table_stat(PS, Att, Def, SpA, SpD, Vel, color, bordercolor)
+    table(align="center" style={background:'#'+bordercolor, border: '3px solid #'+bordercolor})
+        tr
+            th(rowspan="2" class="tl_roundy" style={background: '#'+color}) Statistica
+        th(class="tr_roundy" style={background: '#'+color}) #[small Al lv. 100]
+
+        +stat_line("PS", PS)
+        
+        +stat_line("Att", Att)
+        
+        +stat_line("Def", Def)
+        
+        +stat_line("SpA", SpA)
+        
+        +stat_line("SpD", SpD)
+        
+        +stat_line("Vel", Vel)
+
+        tr 
+            td(colspan="3" class="bl_roundy br_roundy" style={background: '#'+color})
+                p
+                    small Le statistiche massime sono calcolate con 252 PA, 31 VI e una natura favorevole.<br>Le statistiche minime sono calcolate con 0 PA, VI pari a 0 e una natura sfavorevole.
