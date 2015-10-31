@@ -1,0 +1,26 @@
+extend ../templates/basePage
+
+//contiene tutti gli style noti
+block append style
+    link(href="/style/stat_table.css" rel="stylesheet")
+    link(href="/style/roundy.css" rel="stylesheet")
+    link(href="/style/dexList.css" rel="stylesheet")
+
+block append scripts
+    script(src="/script/editor.js")
+
+block content
+    h1 NON FUNZIONA!
+    p prova i simpatici bottoni a fondo pagina (prova anche a premerli più volte di fila)
+    -
+        if(newPage)
+            tl = 'Stai creando '+pn;
+        else
+            tl = 'Modifica di '+pn;
+    h2= tl
+    //casella di modifica
+    textarea(lang="it" name="" rows="20" cols="80")
+    button#showPreview(style="display:inline-block;")  Mostra anteprima
+    button#save(style="display:inline-block;") Salva la pagina
+    h2 Anteprima:
+    #preview

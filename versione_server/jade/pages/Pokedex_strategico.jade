@@ -1,7 +1,7 @@
 extend ../templates/basePage
 
 block content
-    h2(align="left") Elenco dei Pokémon
+    h2 Elenco dei Pokémon
     p Ricerca:
     .form-group
         input(type="text" class="form-control" id="dex_search" placeholder="Search")
@@ -13,6 +13,3 @@ block append scripts
     script(src="/script/vendor/listjs.js")
     // Scripts for search pokédex 
     script(src="/script/search_dex.js")
-
-block append style
-    link(href="/style/dexList.css" rel="stylesheet")
